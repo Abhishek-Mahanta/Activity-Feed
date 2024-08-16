@@ -9,13 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        /* Custom styles for activity feed */
         .activity-feed {
             padding: 20px;
             position: relative;
         }
 
-        /* Key change: Vertical line */
         .activity-feed::before {
             content: '';
             position: absolute;
@@ -38,14 +36,11 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
-        /* Key change: Icons outside the box */
         .feed-item .icon {
             position: absolute;
             left: -55px;
             top: 0px;
-            /* Adjust this value to position the icon at the top */
             transform: translateY(0);
-            /* Remove the vertical centering transform */
             width: 40px;
             height: 40px;
             background-color: rgb(65, 7, 7);
@@ -111,7 +106,6 @@
         </div>
         <div class="activity-feed mt-5">
 
-            <!-- Feed Item 1 -->
             <div class="feed-item">
                 <div class="icon">
                     <i class="fa-sharp fa-solid fa-pen-to-square"></i>
@@ -125,7 +119,6 @@
                 </div>
             </div>
 
-            <!-- Feed Item 2 -->
             <div class="feed-item">
                 <div class="icon">
                     <i class="fa-sharp fa-solid fa-pen-to-square"></i>
@@ -139,7 +132,6 @@
                 </div>
             </div>
 
-            <!-- Feed Item 3 -->
             <div class="feed-item">
                 <div class="icon email-icon">
                     <i class="fas fa-envelope"></i>
