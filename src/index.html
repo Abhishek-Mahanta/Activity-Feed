@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Feed UI</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Custom styles for activity feed */
+        .activity-feed {
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Key change: Vertical line */
+        .activity-feed::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #dee2e6;
+        }
+
+        .feed-item {
+            display: flex;
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 5px;
+            padding: 35px;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Key change: Icons outside the box */
+        .feed-item .icon {
+            position: absolute;
+            left: -55px;
+            top: 0px;
+            /* Adjust this value to position the icon at the top */
+            transform: translateY(0);
+            /* Remove the vertical centering transform */
+            width: 40px;
+            height: 40px;
+            background-color: rgb(65, 7, 7);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            z-index: 1;
+        }
+
+        .feed-item .email-icon {
+            background-color: #28a745;
+        }
+
+        .feed-content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .feed-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .feed-header h5 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .feed-header small {
+            color: #6c757d;
+        }
+
+        .feed-divider {
+            border-top: 1px solid #dee2e6;
+            margin: 10px 0;
+        }
+
+        .feed-link {
+            margin-top: 5px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .feed-link:hover {
+            text-decoration: underline;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="page-header">
+            <h3>Activity Feed</h3>
+        </div>
+        <div class="activity-feed mt-5">
+
+            <!-- Feed Item 1 -->
+            <div class="feed-item">
+                <div class="icon">
+                    <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                </div>
+                <div class="feed-content">
+                    <div class="feed-header">
+                        <h5>Phone Inbound: Spoke With</h5>
+                        <small>7 months ago by Veera Mogilicherla</small>
+                    </div>
+                    <div class="feed-divider"></div>
+                </div>
+            </div>
+
+            <!-- Feed Item 2 -->
+            <div class="feed-item">
+                <div class="icon">
+                    <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                </div>
+                <div class="feed-content">
+                    <div class="feed-header">
+                        <h5>FollowUp-Reviewing Only (Pending)</h5>
+                        <small>almost 3 years ago by Chris Aldrich</small>
+                    </div>
+                    <div class="feed-divider"></div>
+                </div>
+            </div>
+
+            <!-- Feed Item 3 -->
+            <div class="feed-item">
+                <div class="icon email-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="feed-content">
+                    <div class="feed-header">
+                        <h5>Automated Email</h5>
+                        <small>almost 3 years ago</small>
+                    </div>
+                    <div class="feed-divider"></div>
+                    <a href="#" class="feed-link">Estimate Request for Testk - Big Hill Movers</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
